@@ -1,0 +1,208 @@
+/* ==========================================================================
+   MODAL DIALOG STYLES (RSVP & PERSONALIZED SHARE)
+   ========================================================================== */
+
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(3, 7, 18, 0.88);
+  backdrop-filter: blur(12px);
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  animation: modalFadeIn 0.25s ease-out;
+}
+
+@keyframes modalFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.modal-card {
+  position: relative;
+  width: 100%;
+  max-width: 520px;
+  background: #0c1833;
+  border: 1px solid rgba(212, 175, 55, 0.4);
+  border-radius: 22px;
+  padding: 36px 30px;
+  box-shadow: 
+    0 25px 60px rgba(0, 0, 0, 0.8),
+    0 0 35px rgba(212, 175, 55, 0.2);
+  color: #ffffff;
+  animation: modalSlideUp 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes modalSlideUp {
+  from {
+    transform: translateY(20px) scale(0.96);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.modal-close-btn:hover {
+  background: #f43f5e;
+  border-color: #f43f5e;
+  transform: rotate(90deg);
+}
+
+.modal-header-center {
+  text-align: center;
+  margin-bottom: 26px;
+}
+
+.modal-icon-badge {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 12px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(212, 175, 55, 0.25) 0%, rgba(212, 175, 55, 0.05) 70%);
+  border: 1px solid rgba(212, 175, 55, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gold-light);
+  box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+}
+
+.modal-title {
+  font-family: var(--font-serif);
+  font-size: 1.55rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 6px;
+}
+
+.modal-subtitle {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+/* Radio attendance options */
+.rsvp-options-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.rsvp-option-label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 16px 12px;
+  background: rgba(8, 15, 30, 0.65);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.rsvp-option-label:hover {
+  border-color: rgba(212, 175, 55, 0.4);
+  background: rgba(16, 29, 58, 0.8);
+}
+
+.rsvp-option-label.active {
+  border-color: var(--gold-primary);
+  background: rgba(212, 175, 55, 0.15);
+  box-shadow: 0 0 15px rgba(212, 175, 55, 0.25);
+}
+
+.rsvp-option-icon {
+  font-size: 24px;
+  margin-bottom: 6px;
+}
+
+.rsvp-option-text {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+/* Share URL Card */
+.share-link-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(8, 15, 30, 0.8);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  border-radius: 12px;
+  padding: 10px 14px;
+  margin: 18px 0;
+}
+
+.share-link-input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  color: var(--gold-light);
+  font-family: monospace;
+  font-size: 0.88rem;
+  outline: none;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Modal Success State */
+.modal-success-box {
+  text-align: center;
+  padding: 20px 0;
+}
+
+.modal-success-icon {
+  font-size: 54px;
+  margin-bottom: 14px;
+  display: inline-block;
+  animation: popSuccess 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.form-error-message {
+  margin: 10px 0 0;
+  color: #fda4af;
+  font-size: 0.86rem;
+  text-align: center;
+}
+
+.btn-send-wish:disabled {
+  cursor: wait;
+  opacity: 0.7;
+}
+
+.submit-spinner {
+  animation: submitSpin 0.8s linear infinite;
+}
+
+@keyframes submitSpin {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes popSuccess {
+  0% { transform: scale(0); }
+  100% { transform: scale(1); }
+}

@@ -1,0 +1,459 @@
+/* ==========================================================================
+   FORMAL GRADUATION LETTER & COUNTDOWN STYLES
+   ========================================================================== */
+
+.letter-section {
+  position: relative;
+  padding: 60px 20px 80px;
+  display: flex;
+  justify-content: center;
+  z-index: 10;
+}
+
+.letter-scroll-anchor {
+  position: absolute;
+  top: -40px;
+}
+
+/* Parchment Letter Paper */
+.letter-parchment-sheet {
+  position: relative;
+  width: 100%;
+  max-width: 860px;
+  background: var(--paper-cream);
+  color: var(--paper-text-primary);
+  border-radius: 20px;
+  padding: 60px 50px;
+  box-shadow: 
+    0 25px 60px -15px rgba(0, 0, 0, 0.7),
+    0 0 0 1px var(--paper-border),
+    0 0 40px rgba(212, 175, 55, 0.15);
+  animation: letterUnfold 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes letterUnfold {
+  0% {
+    opacity: 0;
+    transform: translateY(40px) scale(0.96);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Ornate Double Gold Border */
+.letter-inner-border {
+  position: absolute;
+  top: 18px;
+  left: 18px;
+  right: 18px;
+  bottom: 18px;
+  border: 1.5px solid rgba(200, 163, 86, 0.45);
+  border-radius: 12px;
+  pointer-events: none;
+}
+
+.letter-corner-decor {
+  position: absolute;
+  width: 36px;
+  height: 36px;
+  border-color: #c8a356;
+  border-style: solid;
+  pointer-events: none;
+}
+
+.corner-tl { top: 24px; left: 24px; border-width: 2px 0 0 2px; }
+.corner-tr { top: 24px; right: 24px; border-width: 2px 2px 0 0; }
+.corner-bl { bottom: 24px; left: 24px; border-width: 0 0 2px 2px; }
+.corner-br { bottom: 24px; right: 24px; border-width: 0 2px 2px 0; }
+
+/* Letter Crest Header */
+.letter-crest-header {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.letter-wreath-icon {
+  width: 72px;
+  height: 72px;
+  margin: 0 auto 12px;
+  background: radial-gradient(circle, #fcf6e7 0%, #faecd0 100%);
+  border: 2px solid var(--paper-gold-border);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  box-shadow: 0 4px 15px rgba(200, 163, 86, 0.25);
+}
+
+.letter-top-sub {
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #997a21;
+  font-weight: 600;
+}
+
+.letter-formal-heading {
+  font-family: var(--font-serif);
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  font-weight: 700;
+  color: #141c2e;
+  letter-spacing: 1px;
+  margin: 6px 0 10px;
+}
+
+.letter-divider-gold {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  margin: 16px auto 0;
+  max-width: 260px;
+}
+
+.letter-divider-gold::before,
+.letter-divider-gold::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(to right, transparent, #c8a356, transparent);
+}
+
+.letter-divider-gold span {
+  color: #c8a356;
+  font-size: 14px;
+}
+
+/* Graduate Spotlight Banner */
+.graduate-spotlight-card {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  background: linear-gradient(135deg, #fdfaf3 0%, #f7f1e1 100%);
+  border: 1px solid rgba(200, 163, 86, 0.35);
+  border-radius: 16px;
+  padding: 28px;
+  margin-bottom: 35px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.04);
+}
+
+.graduate-avatar-frame {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.graduate-photo {
+  width: 140px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 3px solid #ffffff;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15), 0 0 0 1px #c8a356;
+}
+
+.graduate-honor-tag {
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--gold-gradient);
+  color: #0b152d;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 999px;
+  white-space: nowrap;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.graduate-details {
+  flex: 1;
+}
+
+.graduate-label-sub {
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #997a21;
+  font-weight: 600;
+}
+
+.graduate-name {
+  font-family: var(--font-serif);
+  font-size: clamp(1.6rem, 3.2vw, 2.2rem);
+  font-weight: 700;
+  color: #0f172a;
+  margin: 2px 0 6px;
+}
+
+.graduate-degree-name {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #1e3a8a;
+  margin-bottom: 4px;
+}
+
+.graduate-univ {
+  font-size: 0.88rem;
+  color: #64748b;
+  margin-bottom: 12px;
+}
+
+.graduate-quote-box {
+  position: relative;
+  font-style: italic;
+  font-family: var(--font-garamond);
+  font-size: 1.05rem;
+  color: #475569;
+  line-height: 1.5;
+  border-left: 2px solid #c8a356;
+  padding-left: 14px;
+}
+
+/* Invitation Body Letter Text */
+.letter-invitation-body {
+  font-family: var(--font-garamond);
+  font-size: 1.22rem;
+  line-height: 1.8;
+  color: #2b3345;
+  text-align: justify;
+  margin-bottom: 35px;
+}
+
+.letter-greeting-recipient {
+  font-family: var(--font-serif);
+  font-size: 1.35rem;
+  color: #0f172a;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.letter-greeting-recipient span {
+  color: #b48518;
+}
+
+/* Event Core Highlight: Time & Location Box */
+.event-core-highlight-box {
+  background: #0f1c38;
+  color: #ffffff;
+  border-radius: 16px;
+  padding: 30px;
+  margin-bottom: 35px;
+  box-shadow: 0 15px 35px rgba(11, 23, 49, 0.35);
+  border: 1px solid rgba(212, 175, 55, 0.4);
+  position: relative;
+  overflow: hidden;
+}
+
+.event-core-highlight-box::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -20%;
+  width: 250px;
+  height: 250px;
+  background: radial-gradient(circle, rgba(212, 175, 55, 0.15) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.event-highlight-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.event-highlight-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.highlight-card-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: rgba(212, 175, 55, 0.15);
+  border: 1px solid rgba(212, 175, 55, 0.35);
+  color: var(--gold-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.highlight-card-info h4 {
+  font-size: 0.8rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--gold-light);
+  margin-bottom: 4px;
+}
+
+.highlight-card-info .main-text {
+  font-family: var(--font-serif);
+  font-size: 1.18rem;
+  font-weight: 600;
+  color: #ffffff;
+  line-height: 1.35;
+  margin-bottom: 4px;
+}
+
+.highlight-card-info .sub-text {
+  font-size: 0.85rem;
+  color: #94a3b8;
+}
+
+/* Countdown Timer */
+.countdown-container {
+  margin: 35px 0;
+  text-align: center;
+}
+
+.countdown-title {
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #64748b;
+  margin-bottom: 16px;
+  font-weight: 600;
+}
+
+.countdown-digits-row {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.countdown-box {
+  min-width: 82px;
+  background: #ffffff;
+  border: 1px solid rgba(200, 163, 86, 0.35);
+  border-radius: 12px;
+  padding: 12px 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.countdown-box:hover {
+  transform: translateY(-3px);
+  border-color: #c8a356;
+}
+
+.countdown-number {
+  font-family: var(--font-serif);
+  font-size: 2rem;
+  font-weight: 700;
+  color: #0f172a;
+  line-height: 1.1;
+  display: block;
+}
+
+.countdown-unit {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: #997a21;
+  font-weight: 600;
+  margin-top: 4px;
+  display: block;
+}
+
+/* Quick Actions Button Bar */
+.letter-actions-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  margin-top: 35px;
+  padding-top: 30px;
+  border-top: 1px dashed rgba(200, 163, 86, 0.4);
+}
+
+.btn-letter-primary {
+  background: var(--gold-gradient);
+  color: #0b152d;
+  font-weight: 700;
+  padding: 12px 24px;
+  border-radius: 999px;
+  border: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.35);
+  transition: var(--transition-spring);
+  text-decoration: none;
+}
+
+.btn-letter-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(212, 175, 55, 0.5);
+}
+
+.btn-letter-outline {
+  background: #ffffff;
+  color: #1e293b;
+  border: 1px solid #cbd5e1;
+  font-weight: 600;
+  padding: 12px 22px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+  text-decoration: none;
+}
+
+.btn-letter-outline:hover {
+  border-color: #c8a356;
+  color: #997a21;
+  background: #fdfaf2;
+  transform: translateY(-2px);
+}
+
+/* Responsive queries */
+@media (max-width: 768px) {
+  .letter-parchment-sheet {
+    padding: 40px 22px;
+  }
+  
+  .graduate-spotlight-card {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .graduate-quote-box {
+    border-left: none;
+    border-top: 2px solid #c8a356;
+    padding-left: 0;
+    padding-top: 10px;
+  }
+
+  .event-highlight-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .countdown-digits-row {
+    gap: 8px;
+  }
+
+  .countdown-box {
+    min-width: 68px;
+    padding: 10px 6px;
+  }
+
+  .countdown-number {
+    font-size: 1.6rem;
+  }
+}

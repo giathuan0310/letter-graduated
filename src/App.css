@@ -1,0 +1,61 @@
+/* Main App Container Styles */
+
+.app-root {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* Ambient Floating Stardust in Background */
+.stardust-container {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.stardust-particle {
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 230, 160, 0.9) 0%, rgba(212, 175, 55, 0.2) 60%, transparent 100%);
+  animation: floatDust linear infinite;
+}
+
+@keyframes floatDust {
+  0% {
+    transform: translateY(105vh) translateX(0) scale(0.6);
+    opacity: 0;
+  }
+  15% {
+    opacity: 0.8;
+  }
+  85% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(-10vh) translateX(30px) scale(1.1);
+    opacity: 0;
+  }
+}
+
+/* Transition wrapper for when envelope opens */
+.revealed-content-container {
+  position: relative;
+  z-index: 5;
+  transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+}
+
+.revealed-content-container.hidden {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.revealed-content-container.visible {
+  opacity: 1;
+  max-height: none;
+  pointer-events: auto;
+}

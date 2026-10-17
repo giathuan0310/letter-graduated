@@ -1,0 +1,252 @@
+/* ==========================================================================
+   GRADUATION INVITATION DESIGN SYSTEM
+   Luxury Midnight Navy & Champagne Gold Palette
+   ========================================================================== */
+
+:root {
+  /* Brand Color Palette */
+  --bg-deep-navy: #060d1f;
+  --bg-midnight: #0b152d;
+  --bg-card: rgba(16, 29, 58, 0.75);
+  --bg-card-hover: rgba(22, 39, 78, 0.85);
+  
+  /* Parchment Letter Paper */
+  --paper-cream: #fffdf9;
+  --paper-parchment: #f9f5eb;
+  --paper-border: #e6dac3;
+  --paper-text-primary: #1e2433;
+  --paper-text-secondary: #576074;
+  --paper-gold-border: #c8a356;
+
+  /* Gold Accents */
+  --gold-primary: #d4af37;
+  --gold-light: #f6e6b4;
+  --gold-bright: #ffd700;
+  --gold-dark: #997a21;
+  --gold-gradient: linear-gradient(135deg, #f7e09e 0%, #d4af37 50%, #997a21 100%);
+  --gold-metallic: linear-gradient(120deg, #d4af37 0%, #fff2be 30%, #d4af37 60%, #a48123 100%);
+  --gold-glow: 0 0 24px rgba(212, 175, 55, 0.45);
+
+  /* Deep Velvet Envelope */
+  --envelope-navy: #0f1d3a;
+  --envelope-navy-dark: #091225;
+  --envelope-flap: #132448;
+  --wax-seal-gold: #c59b27;
+  --wax-seal-red: #a31d1d;
+
+  /* Text Colors */
+  --text-pure: #ffffff;
+  --text-muted: #94a3b8;
+  --text-light: #cbd5e1;
+  --text-gold: #f3df9b;
+
+  /* Fonts */
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-garamond: 'Cormorant Garamond', Georgia, serif;
+  --font-script: 'Alex Brush', cursive;
+  --font-sans: 'Montserrat', 'Plus Jakarta Sans', system-ui, sans-serif;
+
+  /* Shadows & Glassmorphism */
+  --glass-bg: rgba(15, 23, 42, 0.65);
+  --glass-border: rgba(212, 175, 55, 0.22);
+  --glass-blur: blur(16px);
+  --shadow-luxury: 0 20px 40px -15px rgba(0, 0, 0, 0.6), 0 0 25px rgba(212, 175, 55, 0.15);
+  --shadow-paper: 0 25px 50px -12px rgba(0, 0, 0, 0.35), 0 0 0 1px rgba(212, 175, 55, 0.2);
+
+  /* Transitions */
+  --transition-smooth: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-spring: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* Base Reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg-deep-navy);
+  color: var(--text-pure);
+  line-height: 1.6;
+  min-height: 100vh;
+  overflow-x: hidden;
+  background-image: 
+    radial-gradient(circle at 15% 20%, rgba(30, 58, 138, 0.35) 0%, transparent 45%),
+    radial-gradient(circle at 85% 70%, rgba(212, 175, 55, 0.12) 0%, transparent 50%),
+    radial-gradient(circle at 50% 50%, rgba(13, 27, 62, 0.8) 0%, #060d1f 100%);
+  background-attachment: fixed;
+}
+
+/* Luxury Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 9px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-deep-navy);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #d4af37, #1e3a8a);
+  border-radius: 999px;
+  border: 2px solid var(--bg-deep-navy);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--gold-light);
+}
+
+/* Gold Text Utilities */
+.text-gold-gradient {
+  background: var(--gold-metallic);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+.text-gold-static {
+  color: var(--gold-primary);
+}
+
+.font-serif {
+  font-family: var(--font-serif);
+}
+
+.font-garamond {
+  font-family: var(--font-garamond);
+}
+
+.font-script {
+  font-family: var(--font-script);
+}
+
+/* Glass Card */
+.glass-panel {
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+  border-radius: 20px;
+  box-shadow: var(--shadow-luxury);
+}
+
+/* Button Base Styles */
+.btn-gold {
+  background: var(--gold-gradient);
+  color: #0d1b2a;
+  font-weight: 600;
+  font-family: var(--font-sans);
+  padding: 12px 26px;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 0.95rem;
+  box-shadow: 0 4px 18px rgba(212, 175, 55, 0.35);
+  transition: var(--transition-spring);
+  text-decoration: none;
+}
+
+.btn-gold:hover {
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 8px 24px rgba(212, 175, 55, 0.55);
+}
+
+.btn-gold:active {
+  transform: translateY(1px) scale(0.98);
+}
+
+.btn-outline-gold {
+  background: transparent;
+  color: var(--gold-light);
+  border: 1px solid var(--gold-primary);
+  font-weight: 500;
+  padding: 10px 22px;
+  border-radius: 999px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.95rem;
+  transition: var(--transition-smooth);
+  text-decoration: none;
+}
+
+.btn-outline-gold:hover {
+  background: rgba(212, 175, 55, 0.15);
+  border-color: var(--gold-light);
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+/* Floating Stardust / Bokeh Particles */
+.floating-particle {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  background: radial-gradient(circle, rgba(255, 230, 150, 0.8) 0%, rgba(212, 175, 55, 0) 70%);
+  animation: floatParticle 8s infinite ease-in-out;
+}
+
+@keyframes floatParticle {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+    opacity: 0.3;
+  }
+  50% {
+    transform: translateY(-30px) scale(1.25);
+    opacity: 0.75;
+  }
+}
+
+/* Animations */
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 35px rgba(212, 175, 55, 0.8), 0 0 60px rgba(212, 175, 55, 0.3);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.shimmer-text {
+  background: linear-gradient(90deg, #d4af37 0%, #fff7d6 50%, #d4af37 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer 4s linear infinite;
+}
+
+/* Container */
+.container {
+  width: 100%;
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 16px;
+  }
+}
