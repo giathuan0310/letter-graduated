@@ -90,7 +90,7 @@ export default function LocationCard({ location }) {
             ></iframe>
             <div className="map-floating-overlay-tag">
               <MapPin size={14} color="#ffd700" />
-              <span>Hội Trường A5 - ĐHBK</span>
+              <span>Hội Trường E4 - IUH</span>
             </div>
           </div>
         </div>
