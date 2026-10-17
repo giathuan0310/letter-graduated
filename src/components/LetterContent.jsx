@@ -75,7 +75,7 @@ export default function LetterContent({ graduationData }) {
             cùng sự đồng hành sẻ chia của những người bạn tuyệt vời.
           </p>
           <p style={{ marginTop: '12px' }}>
-            Tôi trân trọng kính mời bạn đến chung vui, chụp ảnh kỷ niệm và chứng kiến khoảnh khắc nhận bằng cử nhân
+            Tôi trân trọng kính mời bạn đến chung vui, chụp ảnh kỷ niệm và chứng kiến khoảnh khắc nhận bằng kỹ sư
             trang trọng của tôi:
           </p>
         </div>
