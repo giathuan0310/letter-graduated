@@ -54,7 +54,7 @@ export const graduationData = {
       id: 3,
       sender: "Hội bạn thân K17",
       relation: "Bạn bè",
-      message: "Chúc mừng bạn tôi chính thức ra trường! Chúc Trang sớm trở thành Lead Engineer xịn sò nhé!",
+      message: "Chúc mừng bạn tôi chính thức ra trường! Chúc Thuận sớm trở thành Lead Engineer xịn sò nhé!",
       date: "22/11/2026",
       avatarBg: "#D97706"
     }
