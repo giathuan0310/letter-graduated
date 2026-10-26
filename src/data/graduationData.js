@@ -25,7 +25,7 @@ export const graduationData = {
   // Địa điểm
   location: {
     venueName: "Hội Trường E4 - Đại Học Công Nghiệp TP.HCM",
-    address: "12 Nguyễn Văn Bảo, Phường Hạnh Thông, Quận Gò Vấp, TP. Hồ Chí Minh",
+    address: "12 Nguyễn Văn Bảo, Phường Hạnh Thông,Quận Gò Vấp, TP. Hồ Chí Minh",
     hallDetail: "Khu E - Hội trường E4",
     parkingInfo: "Gửi xe máy và ô tô tại các bãi giữ xe trong khuôn viên trường",
     mapUrl: "https://maps.google.com/?q=Trường+Đại+học+Công+Nghiệp+TP.HCM+12+Nguyễn+Văn+Bảo",
