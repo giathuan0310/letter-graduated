@@ -11,7 +11,7 @@ export const graduationData = {
     quote: "Hành trình 4.5 năm đại học khép lại, mở ra một chương mới tràn đầy ước mơ và hoài bão. Cảm ơn gia đình, thầy cô và những người bạn tuyệt vời đã luôn đồng hành cùng tôi!",
     phone: "0942192110",
     email: "luonggiathuan2019.gr@gmail.com",
-    avatar: "/images/5.png"
+    avatar: "/images/totnghiep.png"
   },
 
   // Thời gian & Đếm ngược
